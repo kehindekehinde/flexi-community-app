@@ -1,5 +1,9 @@
 import React from "react";
 import { Search, Person, Chat, Notifications } from "@mui/icons-material";
+import './header.css';
+
+
+
 const Header = () => {
   return (
     <div className="headerContainer">

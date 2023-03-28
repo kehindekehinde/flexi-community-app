@@ -1,8 +1,22 @@
 import './home.css';
+import Header from '../../components/header/Header';
+import Sidebar from '../../components/sidebar/Sidebar';
+import Feedpost from '../../components/feedpost/Feedpost';
+import Rightbar from '../../components/rightbar/Rightbar';
+import React from 'react';
 
 const Home = () => {
   return (
-    <div>Home</div> 
+    <div>
+    <Header />
+    
+    <div className="homeContainer">
+    <Sidebar />
+    <Feedpost />
+    <Rightbar />
+    </div>
+    
+    </div>
   )
 }
 
