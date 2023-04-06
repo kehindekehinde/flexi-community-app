@@ -1,0 +1,91 @@
+.login{
+    width: 100vw;
+    height: 100vh;
+    background-color: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.loginContainer{
+    /* width: 900px; */
+
+    width: 70%;
+    height: 70%;
+    background-color: white;
+    display: flex;
+}
+
+.loginLeftSide,.loginrightSide{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+.loginLeftSide{
+    /* width: 3px; */
+    background-color: rgba(212, 174, 212, 0.782);
+    border-radius: 20px 0 0 20px;
+    padding: 20px;
+    
+
+}
+.loginLogo{
+    font-size: 50px;
+    font-weight: 800;
+    color: blueviolet;
+    margin-bottom: 10px;
+}
+.loginWelcome{
+    font-size: 24px;
+    color: whitesmoke;
+}
+.loginBox{
+    height: 450px;
+    padding: 40px;
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.loginInput{
+    height: 50px;
+    border-radius: 20px;
+    border: 1px solid rebeccapurple;
+    font-size: 18px;
+    padding-left: 20px;
+
+}
+.loginInput:focus{
+    outline: none;
+    
+}
+.loginButton{
+    height: 50px;
+    border-radius: 20px;
+    border: none;
+    background-color: blueviolet;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.loginForgotPsd{
+    text-align: center;
+    color: brown;
+}
+
+.loginRegistration{
+    width: 80%;
+    height: 50px;
+    border-radius: 20px;
+    border: none;
+    background-color: rgba(150, 76, 220, 0.723);
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    align-self: center;
+}

@@ -1,5 +1,6 @@
 .feedpost{
-    flex: 5;
-    background-color: red;
-
+    flex: 6;
+}
+.feedpostContainer{
+    padding: 20px;
 }

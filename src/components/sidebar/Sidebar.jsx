@@ -44,9 +44,13 @@ const Sidebar = () => {
         </ul>
         <button className="sidebarbutton">Show More</button>
         <hr className="sidebarHr" />
-        <ul className="sidebarFriendList">
+        <ul classNa  me="sidebarFriendList">
           <li className="sidebarFriend">
-            <img classname="sidebarFriendImage" src="assset/person/post1.png" />
+            <img className="sidebarFriendpics" src="./assets/postprofiles/postprofile1.jpg" />
+            <span className="sidebarFriendName">Mary Powell</span>
+          </li>
+          <li className="sidebarFriend">
+            <img className="sidebarFriendpics" src="./assets/postprofiles/postprofile1.jpg" />
             <span className="sidebarFriendName">Mary Powell</span>
           </li>
         </ul>

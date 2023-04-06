@@ -3,7 +3,6 @@ import Header from '../../components/header/Header';
 import Sidebar from '../../components/sidebar/Sidebar';
 import Feedpost from '../../components/feedpost/Feedpost';
 import Rightbar from '../../components/rightbar/Rightbar';
-import React from 'react';
 
 const Home = () => {
   return (
