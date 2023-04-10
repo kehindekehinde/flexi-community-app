@@ -5,6 +5,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    border:4px solid red
 
 }
 .loginContainer{
@@ -12,23 +13,25 @@
 
     width: 70%;
     height: 70%;
-    background-color: white;
     display: flex;
 }
 
-.loginLeftSide,.loginrightSide{
+.loginLeftSide,.loginRightSide{
     flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
+   
 }
 .loginLeftSide{
     /* width: 3px; */
     background-color: rgba(212, 174, 212, 0.782);
-    border-radius: 20px 0 0 20px;
+    border-radius: 30px 0 0 30px;
     padding: 20px;
-    
+}
+.loginRightSide{
+    border-radius: 0 30px 30px 0;
+    border: 2px solid  rgba(212, 174, 212, 0.782);
 
 }
 .loginLogo{
@@ -37,18 +40,26 @@
     color: blueviolet;
     margin-bottom: 10px;
 }
+
 .loginWelcome{
     font-size: 24px;
     color: whitesmoke;
 }
 .loginBox{
-    height: 300px;
-    padding: 40px;
-    background-color: white;
-    border-radius: 20px;
+    height: 350px;
+    max-width: 300px;
+    padding: 0 40px 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+.loginRightSideDesc{
+    font-size: 20px;
+    font-weight: 500;
+    color: black;
+    margin-bottom: 10px;
+    text-align: center;
+
 }
 .loginInput{
     height: 50px;

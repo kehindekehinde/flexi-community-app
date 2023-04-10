@@ -1,4 +1,4 @@
-.login{
+.register{
     width: 100vw;
     height: 100vh;
     background-color: whitesmoke;
@@ -7,7 +7,7 @@
     justify-content: center;
 
 }
-.loginContainer{
+.registerContainer{
     /* width: 900px; */
 
     width: 70%;
@@ -16,14 +16,14 @@
     display: flex;
 }
 
-.loginLeftSide,.loginrightSide{
+.registerLeftSide,.loginrightSide{
     flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     
 }
-.loginLeftSide{
+.registerLeftSide{
     /* width: 3px; */
     background-color: rgba(212, 174, 212, 0.782);
     border-radius: 20px 0 0 20px;
@@ -31,17 +31,17 @@
     
 
 }
-.loginLogo{
+.registerLogo{
     font-size: 50px;
     font-weight: 800;
     color: blueviolet;
     margin-bottom: 10px;
 }
-.loginWelcome{
+.registerWelcome{
     font-size: 24px;
     color: whitesmoke;
 }
-.loginBox{
+.registerBox{
     height: 450px;
     padding: 40px;
     background-color: white;
@@ -50,7 +50,7 @@
     flex-direction: column;
     justify-content: space-between;
 }
-.loginInput{
+.registerInput{
     height: 50px;
     border-radius: 20px;
     border: 1px solid rebeccapurple;
@@ -58,11 +58,11 @@
     padding-left: 20px;
 
 }
-.loginInput:focus{
+.registerInput:focus{
     outline: none;
     
 }
-.loginButton{
+.registerButton{
     height: 50px;
     border-radius: 20px;
     border: none;
@@ -72,12 +72,12 @@
     font-weight: 600;
     cursor: pointer;
 }
-.loginForgotPsd{
+.registerForgotPsd{
     text-align: center;
     color: brown;
 }
 
-.loginRegistration{
+.registerRegistration{
     width: 80%;
     height: 50px;
     border-radius: 20px;
