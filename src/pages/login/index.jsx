@@ -20,11 +20,11 @@ const Login = () => {
       setLoading(true);
 
       await login(emailRef.current.value, passwordRef.current.value);
-      navigate("/");
+      navigate("/dashboard");
     } catch (err) {
       let msg = "Failed to Log in";
 
-      if (err.message.toLowerCase().includes("no user record"))
+      if (err.message.toLowerCase().includes("no user record" ||"EMAIL_NOT_FOUND"||"INVALID_PASSWORD"))
         msg = "Please check your credentials";
       setError(msg);
       setTimeout(() => {

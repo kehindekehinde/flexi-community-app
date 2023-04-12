@@ -60,11 +60,10 @@
     display: flex;
 }
 .headerIconItem{
-    /* margin-right: 10px; */
+    margin-right: 10px;
     cursor: pointer;
     position: relative;
-    border: 1px solid red;
-    display: flex;
+    /* display: flex; */
 }
 .headerIconBadge{
     width: 15px;

@@ -24,7 +24,7 @@ const Logout = () => {
     {error && <div className="registerAlertError">{error}</div>}
 
     <div className="logoutButton">
-    <Link to={'/Logi'} onClick={handleLogout}>Log out here<Logout /></Link>
+    <Link to={'/Login'} onClick={handleLogout}>Log out here<Logout /></Link>
     <h2> <strong>Email:</strong>{currentUser.email}</h2>
     </div>
     </div>

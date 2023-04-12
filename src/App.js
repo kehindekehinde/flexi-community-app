@@ -9,21 +9,23 @@ import { AuthProvider } from "./pages/contexts/Authcontext";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import React from "react";
 
-function App() {
-  return <div className="App"><Register />
-  </div>;
-}
+const App = () => {
+  return (
+    <div className="App">
+      <Router>
+        <AuthProvider>
+          <Routes>
+            <Route element={<PrivateRoute />}>
+              <Route exact path="/dashboard" element={<Home />} />
+            </Route>
+            <Route path="/register" element={<Register />} />
+            <Route path="/" element={<Login />} />
+            <Route path="*" element={<Login />} />
+          </Routes>
+        </AuthProvider>
+      </Router>
+    </div>
+  );
+};
 
 export default App;
-
-// <Router>
-//         <AuthProvider>
-//           <Routes>
-//               <Route eaxct path="/" element={<PrivateRoute />}>
-//                 <Route exact path="/Home" element={<Home />} />
-//               </Route>
-//             <Route path="/register" Component={Register} />
-//             <Route path="/login" Component={Login} />
-//           </Routes>
-//         </AuthProvider>
-//       </Router>

@@ -1,6 +1,8 @@
 import React, { useRef, useState } from "react";
 import { useAuth } from "../contexts/Authcontext";
 import { Link, useNavigate } from "react-router-dom";
+import "./register.css";
+
 
 const Register = () => {
   // const usernameRef =useRef()
@@ -17,16 +19,24 @@ const Register = () => {
   async function handleSubmit(e) {
     e.preventDefault();
     if (passwordRef.current.value !== passwordconfirmRef.current.value) {
-      return setError("passswords do not match");
+      return setError("passwords do not match");
     }
     try {
       setError("");
       setLoading(true);
       //await
       await register(emailRef.current.value, passwordRef.current.value);
-      navigate("/Home");
+      // navigate("/");
+      navigate("/dashboard");
     } catch (err){
-      setError("Failed to create an account");
+      let msg = "Failed to create an account";
+
+      if (err.message.toLowerCase().includes("no user record"))
+      msg = "Please check your credentials";
+    setError(msg);
+    setTimeout(() => {
+      setError("");
+    }, 3000);
       console.log(err)
     }
 

@@ -9,7 +9,7 @@ const Home = () => {
   return (
     <div>
       <Header />
-      <Logout />
+      
 
       <div className="homeContainer">
         <Sidebar />
@@ -21,3 +21,6 @@ const Home = () => {
 };
 
 export default Home;
+
+
+      // <Logout />
