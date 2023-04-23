@@ -1,8 +1,6 @@
 import React from "react";
 import { Search, Person, Chat, Notifications } from "@mui/icons-material";
-import './header.css';
-
-
+import "./header.css";
 
 const Header = () => {
   return (
@@ -39,7 +37,7 @@ const Header = () => {
             </div>
           </div>
           <div className="headerImg">
-          <img src="/assets/postpics" alt=""/>
+            <img src="/assets/postpics" alt="" />
           </div>
         </div>
       </div>

@@ -1,28 +1,39 @@
 import "./feedpost.css";
 import Share from "../share/Share";
 import PostTemplate from "../postTemplate/PostTemplate";
-import { Posts } from "../../dummyData";
-import React, { useEffect, useState } from "react";
-import { db } from "../../firebase";
-
-import {
-  getDocs,
-  collection,
-  serverTimestamp,
-  doc,
-  deleteDoc,
-} from "firebase/firestore";
+import React, { useContext, useState } from "react";
+import PostContext from "../../pages/contexts/Postcontext";
 
 const Feedpost = () => {
+  const { posts } = useContext(PostContext);
+  const [currentPost, setCurrentPost] = useState({});
 
+  const [postId, setPostId] = useState("");
+  const getPostIdHandler = (id) => {
+    console.log("the Id of dumentt to btw", id);
+    setPostId(id);
+  };
 
   return (
     <div className="feedpost">
       <div className="feedpostContainer">
-        <Share />
-        {Posts.map((p) => (
-          <PostTemplate key={p.id} post={p} />
-        ))}
+        <Share
+          id={postId}
+          setPostId={setPostId}
+          setCurrentPost={setCurrentPost}
+          currentPost={currentPost}
+        />
+        {posts.map((doc) => {
+          return (
+            <PostTemplate
+              key={doc.id}
+              doc={doc}
+              getPostId={getPostIdHandler}
+              setCurrentPost={setCurrentPost}
+              currentPost={currentPost}
+            />
+          );
+        })}
       </div>
     </div>
   );

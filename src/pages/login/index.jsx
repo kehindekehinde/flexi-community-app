@@ -1,5 +1,5 @@
 import "./login.css";
-import  { useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { useAuth } from "../contexts/Authcontext";
 import { Link, useNavigate } from "react-router-dom";
 
@@ -24,13 +24,16 @@ const Login = () => {
     } catch (err) {
       let msg = "Failed to Log in";
 
-      if (err.message.toLowerCase().includes("no user record" ||"EMAIL_NOT_FOUND"||"INVALID_PASSWORD"))
+      if (
+        err.message
+          .toLowerCase()
+          .includes("no user record" || "EMAIL_NOT_FOUND" || "INVALID_PASSWORD")
+      )
         msg = "Please check your credentials";
       setError(msg);
       setTimeout(() => {
         setError("");
       }, 3000);
-      
     }
 
     setLoading(false);
@@ -71,6 +74,8 @@ const Login = () => {
               </button>
             </div>
           </form>
+          <div className="loginBo"> 
+          
           <span className="loginForgotPsd">Forgot password?</span>
 
           <button className="loginRegistration">
@@ -78,6 +83,7 @@ const Login = () => {
               Create a new Account
             </Link>
           </button>
+          </div>
           {error && <div className="registerAlertError">{error}</div>}
         </div>
       </div>

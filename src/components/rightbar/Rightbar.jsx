@@ -1,11 +1,7 @@
-import './rightbar.css'
+import "./rightbar.css";
 
 const Rightbar = () => {
-  return (
-    <div className='rightbar'>
-    
-    </div>
-  )
-}
+  return <div className="rightbar"></div>;
+};
 
-export default Rightbar
+export default Rightbar;

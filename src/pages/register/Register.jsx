@@ -3,7 +3,6 @@ import { useAuth } from "../contexts/Authcontext";
 import { Link, useNavigate } from "react-router-dom";
 import "./register.css";
 
-
 const Register = () => {
   // const usernameRef =useRef()
   const emailRef = useRef();
@@ -28,16 +27,16 @@ const Register = () => {
       await register(emailRef.current.value, passwordRef.current.value);
       // navigate("/");
       navigate("/dashboard");
-    } catch (err){
+    } catch (err) {
       let msg = "Failed to create an account";
 
       if (err.message.toLowerCase().includes("no user record"))
-      msg = "Please check your credentials";
-    setError(msg);
-    setTimeout(() => {
-      setError("");
-    }, 3000);
-      console.log(err)
+        msg = "Please check your credentials";
+      setError(msg);
+      setTimeout(() => {
+        setError("");
+      }, 3000);
+      console.log(err);
     }
 
     setLoading(false);
@@ -87,9 +86,11 @@ const Register = () => {
             </div>
           </form>
           {error && <div className="registerAlertError">{error}</div>}
-          <button className="registerRegistration" type="submit">
+          <div className="loginBo">
+          <button className="registerRegistration loginBo" type="submit">
             <Link to="/Login">Log into Account</Link>
           </button>
+          </div>
         </div>
       </div>
     </div>
